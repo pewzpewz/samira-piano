@@ -66,7 +66,9 @@ export async function ensurePianoSamples() {
         const midi = Number(midiStr)
         if (buffers.has(midi)) return
         try {
-          const res = await fetch(`/audio/piano/${name}.mp3`)
+          const res = await fetch(
+            `${import.meta.env.BASE_URL}audio/piano/${name}.mp3`,
+          )
           if (!res.ok) return
           const raw = await res.arrayBuffer()
           const buf = await ctx.decodeAudioData(raw.slice(0))

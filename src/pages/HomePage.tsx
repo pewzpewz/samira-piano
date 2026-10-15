@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { assetUrl } from '../assetUrl'
 import { COURSE_SUBTITLE, COURSE_TITLE } from '../data/course'
 import './home.css'
 
@@ -7,7 +8,7 @@ export function HomePage() {
     <div className="home">
       <section className="hero">
         <img
-          src="/logo.png?v=2"
+          src={`${assetUrl('logo.png')}?v=2`}
           alt="Samira Piano"
           className="hero-logo"
           width={220}

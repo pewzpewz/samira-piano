@@ -1,4 +1,5 @@
 import { Link, Outlet } from 'react-router-dom'
+import { assetUrl } from '../assetUrl'
 import { IntroMusic } from './IntroMusic'
 import './layout.css'
 
@@ -9,7 +10,7 @@ export function Layout() {
       <header className="site-header">
         <Link to="/" className="brand" aria-label="Samira Piano home">
           <img
-            src="/logo.png?v=2"
+            src={`${assetUrl('logo.png')}?v=2`}
             alt="Samira Piano"
             className="brand-logo"
             width={140}

@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
+import { assetUrl } from '../assetUrl'
 import './introMusic.css'
 
 const FLAG = 'samira-local-intro-v2'
-const INTRO_SRC = '/audio/intro.mp3'
-const INTRO_FALLBACK = '/audio/intro.ogg'
+const INTRO_SRC = assetUrl('audio/intro.mp3')
+const INTRO_FALLBACK = assetUrl('audio/intro.ogg')
 
 function playIntro(audio: HTMLAudioElement): Promise<void> {
   audio.currentTime = 0
