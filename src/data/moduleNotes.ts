@@ -1,0 +1,278 @@
+import type { Module } from './courseTypes'
+
+/** Module 1 — written notes first; every later module builds on this. */
+export const moduleNotes: Module = {
+  id: 1,
+  slug: '1',
+  title: 'Notes',
+  blurb:
+    'What a written note is, how it looks on the staff, and how it matches a piano key. Start here — notes appear in every module.',
+  lessons: [
+    {
+      id: '1-1',
+      title: 'What is a note?',
+      goal: 'Know that a note is a written sign for a musical sound — and why we start here.',
+      plain: [
+        'Music exists as sound in the air. Written music exists as signs on a page (or screen). A note is the main sign that means: “play this sound.”',
+        'What: a note is a symbol that stands for a musical pitch (how high or low) and usually also a length (how long to hold it).',
+        'Where: notes sit on the staff — the five-line map you already glimpsed in the interactive demos. Without notes, that map would be empty.',
+        'How: your eye reads the note’s place; your hand finds the matching piano key; your ear checks the result. That loop is reading music.',
+        'Why first: every later idea — pulse, bars, intervals, scales, I–IV–V — is still written with notes. If the symbol is clear, the rest of the course has a place to land.',
+        'Common mix-up: a rest is not a note. A rest is timed silence. Notes are the sounds; rests are the gaps. Both matter, but this module focuses on notes.',
+      ],
+      look: 'Remember one sentence: note = written sound. Oval head = which pitch. Later lessons add length, then rhythm, then harmony — still using this same symbol.',
+      exercises: [
+        {
+          id: '1-1-a',
+          prompt: 'A written note is…',
+          choices: [
+            'Only a decoration',
+            'A symbol that stands for a musical sound',
+            'A rest that means silence only',
+          ],
+          answer: 1,
+          explain: 'Notes mark sounds (pitch, and usually length). Rests mark silence.',
+        },
+        {
+          id: '1-1-b',
+          prompt: 'Why learn notes first in this course?',
+          choices: [
+            'Because notes appear in every later module',
+            'Because rhythm never uses notes',
+            'Because the piano has no keys',
+          ],
+          answer: 0,
+          explain: 'Staff, rhythm, intervals, and chords are all written with notes.',
+        },
+        {
+          id: '1-1-c',
+          prompt: 'Reading a note usually connects…',
+          choices: [
+            'Only the eye (no sound needed)',
+            'Eye → key → ear (see, play, listen)',
+            'Only the metronome',
+          ],
+          answer: 1,
+          explain: 'See the symbol, play the key, hear the pitch — that is the reading loop.',
+        },
+      ],
+    },
+    {
+      id: '1-2',
+      title: 'Parts of a note',
+      goal: 'Name the note head and stem, and know which part shows pitch first.',
+      plain: [
+        'A written note is built from a few small parts. If you know the parts, you stop seeing “black dots” and start seeing information.',
+        'What — note head: the oval. This is the pitch address. Wherever the head sits (line or space) is what you play.',
+        'What — stem: the thin vertical line on many notes. Stems help show duration and keep the page readable; they do not change which pitch the head means.',
+        'How duration peeks in: an open (hollow) head often lasts longer than a filled (black) head. Flags or beams on the stem make notes shorter. You will train lengths in Module 4 — for now, just notice fill vs open.',
+        'Where to look first: always the head’s place on the staff. Beginners sometimes stare at stems or decoration and miss the pitch. Head first, then length.',
+        'Why this matters: later, when rhythms get busy, the head still tells you which key. Rhythm symbols decorate the same pitch address.',
+      ],
+      look: 'Checklist: (1) Find the oval. (2) Ask “line or space?” (3) Only then notice stem / fill for length. Head = where. Stem + fill = often how long.',
+      exercises: [
+        {
+          id: '1-2-a',
+          prompt: 'The oval part of a note is called the…',
+          choices: ['Stem', 'Note head', 'Bar line'],
+          answer: 1,
+          explain: 'The note head sits on the staff and shows pitch.',
+        },
+        {
+          id: '1-2-b',
+          prompt: 'The thin line attached to many note heads is the…',
+          choices: ['Clef', 'Stem', 'Ledger'],
+          answer: 1,
+          explain: 'Stems go up or down from the head; they do not rename the pitch.',
+        },
+        {
+          id: '1-2-c',
+          prompt: 'When reading pitch, look first at the…',
+          choices: ['Stem direction only', 'Note head’s place on the staff', 'Page number'],
+          answer: 1,
+          explain: 'Pitch lives in where the head sits.',
+        },
+      ],
+    },
+    {
+      id: '1-3',
+      title: 'Notes on lines and spaces',
+      goal: 'See the staff as slots — each line and space can hold one note.',
+      plain: [
+        'The staff is a map with five horizontal lines. Between them sit four spaces. Together they make nine basic “slots” for note heads (plus ledger lines later).',
+        'What: a line note has the line running through the middle of the head. A space note sits in the gap between two lines.',
+        'Where: count lines from the bottom up (1 = bottom line). Spaces also count from the bottom. Higher slots usually mean higher pitch — after a clef is set.',
+        'How to read: decide line vs space, then (with the clef) convert that slot to a letter name. Module 3 deepens the letter map; here you lock the geometry.',
+        'Why geometry first: if you cannot tell “on a line” from “in a space,” letter mnemonics will not help. The slot comes before the name.',
+        'Try it: in the demo, play a line note and a space note. Watch how the glowing note jumps to a different height on the staff.',
+      ],
+      look: 'Same oval, different slot. Line = line through the head. Space = head between lines. Higher slot → usually higher sound.',
+      exercises: [
+        {
+          id: '1-3-a',
+          prompt: 'Notes can sit…',
+          choices: ['Only on lines', 'Only in spaces', 'On lines or in spaces'],
+          answer: 2,
+          explain: 'Both lines and spaces are note positions.',
+        },
+        {
+          id: '1-3-b',
+          prompt: 'A standard staff has how many lines?',
+          choices: ['Three', 'Five', 'Seven'],
+          answer: 1,
+          explain: 'Five lines (and four spaces between them).',
+        },
+        {
+          id: '1-3-c',
+          prompt: 'Before naming a letter, you should first see…',
+          choices: [
+            'Whether the head is on a line or in a space',
+            'Only the composer’s birth year',
+            'Whether the piano lid is open',
+          ],
+          answer: 0,
+          explain: 'Geometry (slot) first, then letter name with the clef.',
+        },
+      ],
+    },
+    {
+      id: '1-4',
+      title: 'Note names on the staff',
+      goal: 'Link staff slots to letter names — and know why the clef is required.',
+      plain: [
+        'Letter names in English are A B C D E F G, then the cycle repeats higher or lower. On the piano we often start teaching from C; on the staff the same seven letters fill every slot.',
+        'What the clef does: without a clef, five lines are only a grid. The clef says which letter belongs to which line. Treble clef is our beginner map (higher / right-hand area).',
+        'Why not memorize everything today: a full staff is many notes. Learn anchors (for example G on the second line of treble, and neighbors), then expand. Slow naming beats fast guessing.',
+        'How to practice: look at one note → say the letter aloud → find it again tomorrow. Saying the name builds the link used in every later module.',
+        'Where this goes next: Module 2 connects letters to keys and high/low sound. Module 3 drills the treble map more deeply. You already know the rule: slot + clef → letter.',
+        'Why letters matter: teachers, books, and chord labels (C–E–G, I–IV–V) all speak in letters. Syllables like do–re–mi help singing; this course leads with letters.',
+      ],
+      look: 'Formula: clef + slot → letter. Practice one clear note at a time. Guessing the whole staff at once creates fog.',
+      exercises: [
+        {
+          id: '1-4-a',
+          prompt: 'Letter names for notes use…',
+          choices: ['Only numbers', 'A through G (then the cycle repeats)', 'Only do–re–mi'],
+          answer: 1,
+          explain: 'English letter names cycle A–G.',
+        },
+        {
+          id: '1-4-b',
+          prompt: 'The clef’s job is to…',
+          choices: [
+            'Set which letter names belong to which lines and spaces',
+            'Change the piano’s volume',
+            'Erase stems',
+          ],
+          answer: 0,
+          explain: 'Without a clef, the staff is an empty grid.',
+        },
+        {
+          id: '1-4-c',
+          prompt: 'A good early practice habit is…',
+          choices: [
+            'Name one clear note slowly and repeat it',
+            'Skip naming and only clap',
+            'Memorize every ledger note on day one',
+          ],
+          answer: 0,
+          explain: 'Anchors first; expand the set over time.',
+        },
+      ],
+    },
+    {
+      id: '1-5',
+      title: 'Note ↔ piano key',
+      goal: 'Match one written note to one piano key and close the eye–hand–ear loop.',
+      plain: [
+        'Written pitch is not separate from the instrument. Every note on the staff points to a specific piano key (for that pitch in that octave).',
+        'What you do: (1) see the note, (2) decide the letter / height, (3) press the matching key, (4) listen. If the sound surprises you, check the slot again — the map is honest.',
+        'Where on the piano: higher notes sit to the right; lower notes to the left. The interactive keyboard lights the staff when you play so eye and ear stay linked.',
+        'How to train: one note at a time. Playing five notes while guessing names teaches speed without accuracy. Accuracy first.',
+        'Why this is the heart of the course: intervals are distances between notes; scales are ordered notes; chords are stacked notes. If note ↔ key is shaky, everything later wobbles.',
+        'Mistake to avoid: looking only at your hands. Glance back at the staff after each key so the symbol and the sound stay married.',
+      ],
+      look: 'Loop: staff → key → sound → staff again. One clear match beats ten rushed guesses.',
+      exercises: [
+        {
+          id: '1-5-a',
+          prompt: 'A note on the staff should connect to…',
+          choices: [
+            'Any random key',
+            'One matching piano key for that pitch',
+            'Only the leftmost key',
+          ],
+          answer: 1,
+          explain: 'Reading links staff position to a specific pitch.',
+        },
+        {
+          id: '1-5-b',
+          prompt: 'When you press a key in the interactive piano, you should also…',
+          choices: [
+            'Ignore the staff',
+            'Watch which note lights up on the staff',
+            'Close your eyes forever',
+          ],
+          answer: 1,
+          explain: 'Staff and keyboard reinforce each other.',
+        },
+        {
+          id: '1-5-c',
+          prompt: 'Why practice one note at a time at first?',
+          choices: [
+            'Because accuracy builds a map you can trust later',
+            'Because music never uses more than one note',
+            'Because pianos only have one key',
+          ],
+          answer: 0,
+          explain: 'Clear matches become fluent reading; rushing creates fog.',
+        },
+      ],
+    },
+    {
+      id: '1-6',
+      title: 'Notes in every module',
+      goal: 'See the course path ahead — and why Notes comes first.',
+      plain: [
+        'You now have three anchors: (1) a note is a written sound, (2) the head’s slot shows pitch, (3) each pitch matches a piano key.',
+        'What comes next, linearly: Module 2 — high/low sound and the seven letter names on the keyboard. Module 3 — deeper staff map (treble, ledger lines). Module 4 — how long notes last (pulse and values).',
+        'Then: Module 5 groups beats into bars (meter). Module 6 adds half/whole steps and sharps/flats. Module 7 names distances (intervals). Module 8 builds scales and triads. Module 9 hears home / away / pull (I–IV–V).',
+        'Why this order: each step needs the one before. You cannot feel “dominant pulls home” if “note” and “degree 5” are unclear. Notes are the shared language under all of it.',
+        'How to use later lessons: when a new word appears (interval, triad, V), ask: which notes? where on the staff? which keys? Bring every idea back to sound on the page.',
+        'Checkpoint before you go: if you can point to a note head, say why its place matters, and find a matching key, Module 1 did its job.',
+      ],
+      look: 'Map: note = sound on the page · staff = pitch map · piano = where you touch the sound. Carry that trio through the whole Foundations path.',
+      exercises: [
+        {
+          id: '1-6-a',
+          prompt: 'This Notes module comes first because…',
+          choices: [
+            'Later topics never use the staff',
+            'Written notes are the shared language for the whole course',
+            'Pianos cannot play notes',
+          ],
+          answer: 1,
+          explain: 'Notes are the common thread across modules.',
+        },
+        {
+          id: '1-6-b',
+          prompt: 'Module 1 checkpoint: a note head’s main job is to show…',
+          choices: ['Only volume', 'Pitch position (which sound)', 'Only the composer’s name'],
+          answer: 1,
+          explain: 'The head’s place on the staff (with a clef) is the pitch address.',
+        },
+        {
+          id: '1-6-c',
+          prompt: 'When a later lesson says “interval” or “chord,” you should still ask…',
+          choices: [
+            'Which notes, where on the staff, which keys?',
+            'Only the font size',
+            'Whether the word looks Italian',
+          ],
+          answer: 0,
+          explain: 'Bring every idea back to concrete notes.',
+        },
+      ],
+    },
+  ],
+}

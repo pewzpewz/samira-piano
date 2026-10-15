@@ -1,0 +1,122 @@
+:root {
+  --charcoal: #1a1a1a;
+  --charcoal-soft: #2a2a2a;
+  --cream: #efebe9;
+  --cream-deep: #e4ddd6;
+  --ink: #1a1a1a;
+  --rose: #c49799;
+  --rose-deep: #a8787c;
+  --sage: #5e675e;
+  --gold: #c9a96e;
+  --paper: #efebe9;
+  --mute: rgba(26, 26, 26, 0.62);
+  --line: rgba(26, 26, 26, 0.14);
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --max: 72rem;
+  --lesson-max: 48rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: var(--ink);
+  background:
+    linear-gradient(180deg, #e8e2da 0%, var(--cream) 28%, var(--cream) 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--rose-deep);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--charcoal);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.25rem;
+  border-radius: 0;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--charcoal);
+  color: var(--cream);
+}
+
+.btn-primary:hover {
+  background: var(--rose);
+  color: var(--charcoal);
+}
+
+.btn-primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.btn-ghost:hover {
+  border-color: var(--sage);
+  color: var(--sage);
+}
